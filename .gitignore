@@ -1,7 +1,5 @@
 # dependencies
 node_modules/
-.pnp
-.pnp.js
 
 # build
 dist/
@@ -17,11 +15,8 @@ dist/
 !.env.example
 
 # logs
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
 *.log
+npm-debug.log*
 
 # editor / OS
 .DS_Store
@@ -29,7 +24,6 @@ Thumbs.db
 .idea/
 .vscode/
 *.swp
-*.swo
 *~
 
 # test / coverage
@@ -42,13 +36,4 @@ test-results/
 .cache/
 tmp/
 temp/
-
-# lock optional (keep package-lock if you prefer)
-# package-lock.json
-
-# Grok / preview leftovers
-public/__grok/
-scripts/grok-*
-scripts/install-page.html
-server/middleware/grok-pwa.ts
-server/virtual-grok-og-identity.d.ts
+.grok/
