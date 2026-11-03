@@ -11,7 +11,7 @@ export default defineConfig(({ command, isPreview }) => ({
     strictPort: true,
   },
   preview: {
-    host: "127.0.0.1",
+    host: "0.0.0.0",
     port: 8081,
     strictPort: true,
   },
@@ -19,10 +19,11 @@ export default defineConfig(({ command, isPreview }) => ({
   plugins: [
     tailwindcss(),
     tanstackStart(),
+    // Railway / Docker / любой Node-хост: нужен node-server, НЕ vercel
     ...(command === "build" || isPreview
       ? [
           nitro({
-            preset: "vercel",
+            preset: "node-server",
           }),
         ]
       : []),
